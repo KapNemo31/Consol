@@ -25,16 +25,28 @@ const movieDB = {
 };
 
 
-const img = document.querySelectorAll('img');
+const img = document.querySelectorAll('.promo__adv img');
+const com = document.querySelector('.promo__genre');
+const bg = document.querySelector('.promo__bg');
+const list = document.querySelector('.promo__interactive-list');
+const li = list.querySelectorAll('li');
 
-img.forEach(item => {
+img.forEach((item, i) => {
     item.remove();
 });
-const com = document.querySelector('.promo__genre');
-com.innerHTML = "<div class='promo__genre'>ДРАММА</div>";
 
-//
+com.textContent = "ДРАМА";
 
-const bg = document.querySelector('.promo__bg');
-console.log(bg);
-bg.style.cssText = "background-img: url('../img/bg.jpg') ;"
+bg.style.backgroundImage = "url(img/bg.jpg)";
+
+
+console.log(list);
+
+movieDB.movies.sort();
+
+movieDB.movies.forEach((mov, i) => {
+    li[i].textContent = (i + 1) + ') ' + mov;
+});
+
+
+
