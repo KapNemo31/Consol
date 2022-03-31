@@ -2,9 +2,12 @@
 
 'use strict';
 
+function Test(){
+    console.log('I will conquer this world');
+}
+Test();
 
-
-
+Test();
 
 const personalMovieDB = {
     count: 0,
